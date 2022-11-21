@@ -1,4 +1,4 @@
-package es.ull.practica03.TemplatePattern;
+package es.ull.practica04.TemplatePattern;
 
 public abstract class DivConqTemplate {
 

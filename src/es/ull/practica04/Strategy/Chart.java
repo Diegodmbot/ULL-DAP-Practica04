@@ -1,4 +1,4 @@
-package es.ull.practica03.Strategy;
+package es.ull.practica04.Strategy;
 
 import org.jfree.ui.ApplicationFrame;
 

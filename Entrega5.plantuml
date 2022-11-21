@@ -2,6 +2,66 @@
 
 title __ENTREGA4's Class Diagram__\n
 
+  namespace es.ull.practica03.Strategy {
+    class es.ull.practica03.Strategy.BarChart {
+    }
+  }
+  
+
+  namespace es.ull.practica03.Strategy {
+    class es.ull.practica03.Strategy.BarChartDataBase {
+    }
+  }
+  
+
+  namespace es.ull.practica03.Strategy {
+    class es.ull.practica03.Strategy.CSVFile {
+    }
+  }
+  
+
+  namespace es.ull.practica03.Strategy {
+    abstract class es.ull.practica03.Strategy.Chart {
+    }
+  }
+  
+
+  namespace es.ull.practica03.Strategy {
+    class es.ull.practica03.Strategy.ChartAbstractFactory {
+    }
+  }
+  
+
+  namespace es.ull.practica03.Strategy {
+    class es.ull.practica03.Strategy.HTTPFileDownloader {
+    }
+  }
+  
+
+  namespace es.ull.practica03.Strategy {
+    class es.ull.practica03.Strategy.LineChart {
+    }
+  }
+  
+
+  namespace es.ull.practica03.Strategy {
+    class es.ull.practica03.Strategy.LineChartDataBase {
+    }
+  }
+  
+
+  namespace es.ull.practica03.Strategy {
+    class es.ull.practica03.Strategy.Main {
+    }
+  }
+  
+
+  namespace es.ull.practica03.Strategy {
+    interface es.ull.practica03.Strategy.iCreateDataBase {
+    }
+  }
+  
+
   namespace es.ull.practica03.TemplatePattern {
     class es.ull.practica03.TemplatePattern.DivConqFactory {
     }
@@ -74,6 +134,12 @@ title __ENTREGA4's Class Diagram__\n
   }
   
 
+  es.ull.practica03.Strategy.BarChart -up-|> es.ull.practica03.Strategy.Chart
+  es.ull.practica03.Strategy.BarChartDataBase .up.|> es.ull.practica03.Strategy.iCreateDataBase
+  es.ull.practica03.Strategy.Chart -up-|> org.jfree.ui.ApplicationFrame
+  es.ull.practica03.Strategy.Chart o-- es.ull.practica03.Strategy.iCreateDataBase : createDataBase
+  es.ull.practica03.Strategy.LineChart -up-|> es.ull.practica03.Strategy.Chart
+  es.ull.practica03.Strategy.LineChartDataBase .up.|> es.ull.practica03.Strategy.iCreateDataBase
   es.ull.practica03.TemplatePattern.MergeSortDivConq -up-|> es.ull.practica03.TemplatePattern.DivConqTemplate
   es.ull.practica03.TemplatePattern.MergeSortProblem .up.|> es.ull.practica03.TemplatePattern.IProblem
   es.ull.practica03.TemplatePattern.MergeSortSolution .up.|> es.ull.practica03.TemplatePattern.ISolution
